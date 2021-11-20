@@ -21,9 +21,8 @@ PLAYER1 enters "apple", PLAYER2 must pick a word that begins with letter "e". PL
 			
 Quickplay: This is a "click 'n go" gamemode, with rules to ensure a fast-paced and competitive game. 
 The default settings for quickplay are as follows:
-Time: 1 minute
 Duplicate word punishment: Loss. 
-Win condition: most points.
+Win condition: First to 100 Points.
 
 Custom: In this gamemode, everything can be customized. The user can change parameters for game length, 
 punishment conditions for duplicate words and win conditions. Note, due to time constraints this feature 
