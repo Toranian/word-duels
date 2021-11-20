@@ -37,6 +37,7 @@ function startGame() {
   $("#start-button").style = "visibility: none;";
   words.push(previous_word);
   setInterval(timer, 1000);
+  flipPlayer();
 }
 
 $("#player").html(flip);
