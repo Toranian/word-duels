@@ -9,17 +9,16 @@ var previous_word = "";
 function timer() {
   if (seconds < 10) {
     $("#timer").html(seconds);
-    console.log(seconds);
   }
   if (seconds > 0) {
     seconds--;
   } else {
     flipPlayer();
     clearInterval(timer);
+    gameOver(flip, `${flip} ran out of time`)
     seconds = 10;
   }
 }
-
 function startGame() {
   seconds = 10;
   previous_word = $("#word-input").val();
@@ -52,8 +51,16 @@ function flipPlayer() {
   $("#player").html(flip);
 }
 
-function gameOver(winner) {
-  $("#game-over").html(winner);
+function gameOver(winner, condition) {
+  $("#center-card").css("display", "none");
+  $("#nav").css("visibility", "hidden");
+  clearInterval(timer);
+  $("#win-condition").css("display", "block");
+
+  $("#winner").html(winner + " wins!");
+  $("#reason").html(condition);
+
+
 }
 
 $("#word-form").submit(function (e) {
@@ -72,15 +79,20 @@ $("#word-form").submit(function (e) {
     setInterval(timer, 1000);
   }
 
-  if (player_1_score >= 100 || player_2_score >= 100) {
-    gameOver();
+  if (player_1_score >= 75) {
+    gameOver("Player 1", "Player 1 reached 100 points before Player 2.");
+  } 
+  if (player_2_score >= 75) {
+    gameOver("Player 2", "Player 2 reached 100 points before Player 1.");
   }
 
   let word = $("#word-input").val();
 
   if (words.includes(word)) {
-    gameOver();
-    // alert("You already used that word!");
+    let loser = flip;
+    flipPlayer();
+    let winner = flip;
+    gameOver(winner, `${loser} already used that word.`);
   }
   words.push(word);
 
