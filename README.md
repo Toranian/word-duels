@@ -10,6 +10,12 @@ This is the source distribution for Word Duels.
 
 Recent changes can be found in "CHANGELOG". Bugs and issues can be found in "ISSUES". Documentation is found in "LOG". "FEATURES" contains details relevant to creation and maintenance of the software, not intended for users. Scroll down for PLAYGUIDE
 
+## Install
+1. Clone the repository to your local machine. `git clone git@github.com:Toranian/word-duels.git`
+2. Open this newly cloned folder
+3. Double click on the index.html file, or right click and select "Open with browser".
+
+Alternatively, you can visit the live site at: https://toranian.github.io/word-duels/ 
 
 ## Playguide
 ### Premise
