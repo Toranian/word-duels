@@ -15,7 +15,10 @@ function timer() {
   } else {
     flipPlayer();
     clearInterval(timer);
-    gameOver(flip, `${flip} ran out of time`)
+    let winner = flip;
+    flipPlayer();
+    let loser = flip;
+    gameOver(winner, `${loser} ran out of time`)
     seconds = 10;
   }
 }
@@ -45,8 +48,10 @@ function update_score(number) {
 function flipPlayer() {
   if (flip === "Player 1") {
     flip = "Player 2";
+    $("#player").css("color", "rgb(148, 148, 245)");
   } else {
     flip = "Player 1";
+    $("#player").css("color", "rgb(238, 63, 63)");
   }
   $("#player").html(flip);
 }
@@ -59,8 +64,6 @@ function gameOver(winner, condition) {
 
   $("#winner").html(winner + " wins!");
   $("#reason").html(condition);
-
-
 }
 
 $("#word-form").submit(function (e) {
@@ -100,7 +103,10 @@ $("#word-form").submit(function (e) {
   if (word[0] === last_word[last_word.length - 1]) {
     update_score(seconds);
   } else {
-    update_score(-1 * Math.floor(seconds / 2));
+    let winner = flip;
+    flipPlayer();
+    let loser = flip;
+    gameOver(winner, `${loser}'s word did not start with the last letter of the previous word.`);
   }
 
   // Flip the player after each word
