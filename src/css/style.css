@@ -3,6 +3,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 :root {
@@ -23,7 +24,7 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	background-color: rgb()
+	background-color: var(--bg-color)
 }
 
 #center-card {
@@ -42,13 +43,45 @@
 
 #center-card h1, #center-card h2 {
 	text-align: center;
-	color: black;
-	font-family: '', sans-serif;
+	color: var(--text-color);
+	font-family: 'Fira Code', sans-serif;
 	font-weight: bold;
 }
 
 .button {
+	text-align: center;
+	border: 2px solid var(--text-color);
+	background: rgba(0, 0, 0, 0.0);
+	width: 200px;
+	margin-bottom: 15px;
+	transition-duration: 0.2s;
+	cursor: pointer;
+	text-decoration: none;
 	padding: 15px;
-	border: 2px solid black;
-
+	font-size: 15px;
 }
+
+a {
+	padding: 0;
+}
+
+.button:hover {
+	background-color: white;
+	color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button {
+	font-family: 'Fira Code', monospace;
+	/* font-weight: bold; */
+	color: var(--text-color);
+}
+
+
