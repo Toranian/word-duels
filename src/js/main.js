@@ -91,10 +91,10 @@ $("#word-form").submit(function (e) {
   }
 
   if (player_1_score >= 50) {
-    gameOver("Player 1", "Player 1 reached 100 points before Player 2.");
+    gameOver("Player 1", "Player 1 reached 50 points before Player 2.");
   }
   if (player_2_score >= 50) {
-    gameOver("Player 2", "Player 2 reached 100 points before Player 1.");
+    gameOver("Player 2", "Player 2 reached 50 points before Player 1.");
   }
 
   let word = $("#word-input").val();
