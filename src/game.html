@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Import jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Import bootstrap -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Word game</title>
+  </head>
+  <body>
+    <div id="nav">
+      <h1 id="player_1_score" style="font-size: 40px; font-weight: normal;">0</h1>
+      <h1 id="timer">10</h1>
+      <h1 id="player_2_score" style="font-size: 40px; font-weight: normal;">0</h1>
+    </div>
+    <div id="background-image">
+      <div id="center-card">
+        <h2 id="player"></h2>
+        <h1 id="previous-word">Monkey</h1>
+        <form id="word-form" onsubmit="return false;">
+          <input type="text" id="word-input" autocomplete="off" />
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="./js/main.js"></script>
+</html>
