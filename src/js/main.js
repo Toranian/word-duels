@@ -4,6 +4,7 @@ let player_2_score = 0;
 
 
 var flip = Math.random() > 0.5 ? "Player 1" : "Player 2";
+var seconds = 10;
 
 $("#player").html(flip);
 
@@ -25,11 +26,6 @@ function flipPlayer() {
   }
   $("#player").html(flip);
 }
-var seconds;
-function resetTimer(time) {
-  seconds = time;
-  $("#timer").html(seconds);
-}
 
 $("#word-form").submit(function (e) {
   // Prevent the default behavior of the form (refresh)
@@ -40,26 +36,24 @@ $("#word-form").submit(function (e) {
   if (words.includes(word)) {
     update_score(-1);
   }
+  
   words.push(word);
 
   // Flip the player after each word
   flipPlayer();
-  seconds = 10;
-  document.getElementById("timer").innerHTML = "10";
 
   // Restart the timer
-  resetTimer();
+  seconds = 10;
+  $("#timer").html(seconds);
 
   // Determine if the first letter of the entered word matches the last letter of the last word in the array
   var last_word = words[words.length - 2];
   if (word[0] === last_word[last_word.length - 1]) {
     update_score(1);
-    print("updated score");
   }
 
   $("#previous-word").html(word);
   $("#word-input").val("");
-  return word;
 });
 
 function timer() {
@@ -73,3 +67,5 @@ function timer() {
     clearInterval(timer);
   }
 }
+
+setInterval(timer, 1000);
