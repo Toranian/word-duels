@@ -107,10 +107,16 @@ input[type="text"]:focus {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  text-align: center;
 }
 
 #nav > h1 {
   padding-top: 15px;
   padding-left: 30px;
   padding-right: 50px
+}
+
+.player-container {
+  text-align: center;
+  padding: 30px 30px 0 30px;
 }
