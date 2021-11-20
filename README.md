@@ -38,7 +38,7 @@ PLAYER1 enters "apple", PLAYER2 must pick a word that begins with letter "e". PL
 
 
 
-			******************Game Modes******************
+### Game modes
 			
 Quickplay: This is a "click 'n go" gamemode, with rules to ensure a fast-paced and competitive game. 
 The default settings for quickplay are as follows:
