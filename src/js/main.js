@@ -3,6 +3,13 @@ let player_1_score = 0;
 let player_2_score = 0;
 
 var flip = Math.random() >= 0.5 ? "Player 1" : "Player 2";
+
+if (flip == "Player 1") {
+  $("#player").css("color", "rgb(238, 63, 63)");
+} else {
+  $("#player").css("color", "rgb(148, 148, 245)");
+}
+
 var seconds = 0;
 var previous_word = "";
 
@@ -18,7 +25,7 @@ function timer() {
     let winner = flip;
     flipPlayer();
     let loser = flip;
-    gameOver(winner, `${loser} ran out of time`)
+    gameOver(winner, `${loser} ran out of time`);
     seconds = 10;
   }
 }
@@ -75,17 +82,17 @@ $("#word-form").submit(function (e) {
     player_1_score = 0;
     player_2_score = 0;
     seconds = 10;
-    word= $("#word-input").val();
+    word = $("#word-input").val();
     $("#previous-word").html(word);
     $("#word-input").val("");
     $("#start-button").style = "visibility: none;";
     setInterval(timer, 1000);
   }
 
-  if (player_1_score >= 75) {
+  if (player_1_score >= 50) {
     gameOver("Player 1", "Player 1 reached 100 points before Player 2.");
-  } 
-  if (player_2_score >= 75) {
+  }
+  if (player_2_score >= 50) {
     gameOver("Player 2", "Player 2 reached 100 points before Player 1.");
   }
 
@@ -100,13 +107,16 @@ $("#word-form").submit(function (e) {
   words.push(word);
 
   var last_word = words[words.length - 2];
-  if (word[0] === last_word[last_word.length - 1]) {
+  if (word[0].toLowerCase() === last_word[last_word.length - 1].toLowerCase()) {
     update_score(seconds);
   } else {
     let winner = flip;
     flipPlayer();
     let loser = flip;
-    gameOver(winner, `${loser}'s word did not start with the last letter of the previous word.`);
+    gameOver(
+      winner,
+      `${loser}'s word did not start with the last letter of the previous word.`
+    );
   }
 
   // Flip the player after each word
