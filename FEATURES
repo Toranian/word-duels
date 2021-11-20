@@ -1,20 +1,7 @@
-Levelling system
-Base xp/matching word = 10 -1(second elapsed) 
-Different languages
+                      /////////////////////Feature Updates/////////////////////
+Herein are a series of updates planned for the Word Duels software. This is a flexible file, with frequent changes:
 
-gamemode presets: 
-Deathmatch < duplicate word penalty: instant death, 5 minute game, score limit: 100>
-
-2 game modes:
-Quickplay
-
-1 minute rounds. Word xp: Base xp/matching word = 10 -1(second elapsed) 
-After 1 minute: most points wins. 
-
-
-Custom:
-<set time limit: 5, 10, 20, 30, <no limit>>
-<point limit: First to 50, 100, 200, 250 <freestyle || sandbox>>>
-<Duplicate word penalty:  - 30, -20,-10, 05, 0, <instant death>>
-
-
+1: Language support for multiple languages.
+2: A "Custom" mode, with fully customizable length and win/loss conditions
+3: Support for up to 4 players, though the concept is infinitely scaleable.
+4: A "solo" mode, competing against AI. 
