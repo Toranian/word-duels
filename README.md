@@ -1,4 +1,4 @@
-		                          	////////////////Word Duels////////////////
+							////////////////Word Duels////////////////
 
 Word Duels is a game designed by Konrad Jasman and Isaac Morton for the 2021
 UVEC Engineering Competition - Programming event. 
