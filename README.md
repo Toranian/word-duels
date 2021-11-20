@@ -22,6 +22,7 @@ Alternatively, you can visit the live site at: https://toranian.github.io/word-d
 The premise of the game is as follows: two players flip a virtual to determine who goes first. The first player picks a word, and if the word is within the given 
 dictionary, it will be sent to the second player - who then selects a word that begins with the same letter as the last one ended with. 
 If the word PLAYER2 enters is in the dictionary, PLAYER1 must now find a word that begins with the letter that PLAYER1's word ended with.
+
 ### Gameplay
 1. The system choses a random player to type a first word
 2. The next player must then type out a word that starts with the last letter of the word.
@@ -40,8 +41,6 @@ This can be modified in cusotm to instead deduct points, or not punish the user.
 
 ### Example Round
 PLAYER1 enters "apple", PLAYER2 must pick a word that begins with letter "e". PLAYER2 enters "electric". Now, PLAYER1 must find a word beginning with "c". 
-
-
 
 
 ### Game modes
