@@ -44,7 +44,7 @@
   text-align: center;
   color: var(--text-color);
   font-family: "Fira Code", sans-serif;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .button {
@@ -80,6 +80,7 @@ a,
 button {
   font-family: "Fira Code", monospace;
   color: var(--text-color);
+  /* font-weight: normal; */
 }
 
 input[type="text"] {
