@@ -13,19 +13,23 @@
   <body>
     <div id="nav">
       <div class="player-container">
-        <p style="color: rgb(238, 63, 63);">Player 1</p>
-        <h1 id="player_1_score" style="font-size: 40px; font-weight: normal;">0</h1>
+        <p style="color: rgb(238, 63, 63)">Player 1</p>
+        <h1 id="player_1_score" style="font-size: 40px; font-weight: normal">
+          0
+        </h1>
       </div>
       <h1 id="timer">10</h1>
       <div class="player-container">
         <p style="color: rgb(148, 148, 245)">Player 2</p>
-        <h1 id="player_2_score" style="font-size: 40px; font-weight: normal;">0</h1>
+        <h1 id="player_2_score" style="font-size: 40px; font-weight: normal">
+          0
+        </h1>
       </div>
     </div>
     <div id="background-image">
       <div id="center-card">
-        <p style="font-size: 18px;" id="player"></p>
-        <br>
+        <p style="font-size: 18px" id="player"></p>
+        <br />
         <h1 id="previous-word">Type the first word!</h1>
         <form id="word-form" onsubmit="return false;">
           <input type="text" id="word-input" autocomplete="off" />
@@ -35,17 +39,21 @@
         <!-- <p id="info">The timer begins after you enter the first word.</p> -->
       </div>
       <div id="win-condition">
-        <p style="color: red; font-size: 20px;">Game over!</p>
+        <p style="color: red; font-size: 20px">Game over!</p>
         <h1 id="winner"></h1>
         <p id="reason"></p>
-        <br>
+        <br />
 
         <button onclick="history.go(0)" class="button">Play again</button>
-        <br><br>
+        <br /><br />
 
         <a href="../index.html" class="button">Select Gamemode</a>
       </div>
     </div>
   </body>
   <script src="./js/main.js"></script>
+  <footer>
+    <!-- write a copywrite symbol -->
+    Created by Isaac Morrow and Konrad Jasman
+  </footer>
 </html>

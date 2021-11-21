@@ -135,3 +135,15 @@ input[type="text"]:focus {
   width: 200px;
   box-sizing: border-box;
 }
+
+footer {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;  
+  bottom: 0;
+  width: 100%;
+  color: white;
+  font-family: "Fira Code", monospace;
+}
